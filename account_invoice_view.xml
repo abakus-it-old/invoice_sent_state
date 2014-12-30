@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="invoice_form_sent" model="ir.ui.view">
+            <field name="name">account.invoice.form.sent</field>
+            <field name="model">account.invoice</field>
+			<field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <header>
+					<label string="Invoice sent" attrs="{'invisible':['|',('sent','=',False),]}" position="after"/>
+					<label string="Invoice to be sent" attrs="{'invisible':['|',('sent','=',True),]}" position="after"/>
+                </header>
+            </field>
+        </record>
+
+		<record id="invoice_tree_sent" model="ir.ui.view">
+            <field name="name">account.invoice.tree</field>
+            <field name="model">account.invoice</field>
+			<field name="inherit_id" ref="account.invoice_tree"/>
+            <field name="arch" type="xml">
+                <tree colors="blue:state == 'draft';black:state in ('proforma','proforma2','open');gray:state == 'cancel'" string="Invoice">
+					<field name="sent"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</openerp>
