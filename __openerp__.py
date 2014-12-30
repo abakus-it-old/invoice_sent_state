@@ -6,8 +6,9 @@
     'website': "http://www.abakusitsolutions.eu",
     'category': 'Invoicing',
     'description': """
-    This module adds a new state "sent" for the invoice. 
+    This module adds the information of send for invoices.
+	It shows it in the tree view and in the form view.
     """,
-    'data': [],
+    'data': ['account_invoice_view.xml',],
     'demo': [],
 }
