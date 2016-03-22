@@ -6,8 +6,12 @@
     'website': "http://www.abakusitsolutions.eu",
     'category': 'Invoicing',
     'description': """
-    This module adds the information of send for invoices.
-	It shows it in the tree view and in the form view.
+    #Sent state on invoice
+
+    This module adds a new state info "sent" for the invoice, it is set auto to 'True' when sent by email or printed.
+    It shows it in the tree view and in the form view.
+
+    This module has been developed by Valentin THIRION @ AbAKUS it-solutions
     """,
     'data': ['account_invoice_view.xml',],
     'demo': [],
