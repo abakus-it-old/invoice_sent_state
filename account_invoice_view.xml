@@ -6,9 +6,9 @@
 			<field name="model">account.invoice</field>
 			<field name="inherit_id" ref="account.invoice_form"/>
 			<field name="arch" type="xml">
-				<xpath expr="//field[@name='state']" position="after">
-					<label string="Invoice sent" attrs="{'invisible':['|',('sent','=',False),]}"/>
-					<label string="Invoice to be sent" attrs="{'invisible':['|',('sent','=',True),]}"/>
+				<xpath expr="//field[@name='partner_id']" position="after">
+					<label string="Already sent" attrs="{'invisible':['|',('sent','=',False),]}"/>
+					<label string="Not sent yet" attrs="{'invisible':['|',('sent','=',True),]}"/>
 				</xpath>
 			</field>
 		</record>
@@ -20,7 +20,7 @@
 			<field name="arch" type="xml">
 				<tree>
 					<field name="sent"/>
-		                </tree>
+                </tree>
 			</field>
 		</record>
 	</data>
