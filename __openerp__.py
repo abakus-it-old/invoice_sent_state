@@ -1,6 +1,6 @@
 {
     'name': "Invoice sent state",
-    'version': '1.0',
+    'version': '9.0.1.0',
     'depends': ['account_accountant'],
     'author': "Valentin THIRION, AbAKUS it-solutions SARL",
     'website': "http://www.abakusitsolutions.eu",
